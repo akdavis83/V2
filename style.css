@@ -1,0 +1,136 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Source Sans Pro", Verdana, arial, sans-serif;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.701);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.card {
+  padding: 1.375rem;
+  margin-top: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 22.5rem;
+  background-color: #000;
+  border-radius: 0.3125rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.18);
+}
+
+.nav {
+  justify-content: space-between;
+}
+.nav a {
+  font-size: 1.125rem;
+  color: #fff;
+  transition: opacity 0.23s;
+}
+.nav a:hover {
+  opacity: 0.25;
+}
+
+.header__info {
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__avatar,
+.header__name {
+  width: 50%;
+}
+
+.avatar-photo {
+  max-width: 75%;
+  border-radius: 50%;
+}
+
+.header__contact {
+  flex-direction: column;
+}
+.header__contact li + li {
+  margin-top: 0.125rem;
+}
+.header__contact a {
+  font-size: 0.8125rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.35);
+}
+.header__contact li:first-of-type a {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 25.5%;
+  width: 1px;
+  height: 11.875rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.timeline li + li {
+  margin-top: 0.75rem;
+}
+.timeline span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.timeline .timeline__date {
+  position: relative;
+  margin-right: 2.5rem;
+}
+.timeline .timeline__date:before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 129%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  border-radius: 50%;
+}
+.timeline li:first-of-type .timeline__date {
+  margin-right: 2.625rem;
+}
+.timeline li:first-of-type .timeline__date:before {
+  content: "";
+  left: 135%;
+}
+.timeline .timeline__description {
+  font-weight: 600;
+}
